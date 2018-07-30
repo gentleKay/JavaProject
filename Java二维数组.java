@@ -69,7 +69,7 @@ public class world {
 			}
 			System.out.println();
 		}
-		
+		sc.close();
 	}
 }
 //------------------------------------------------------------------------------
@@ -100,6 +100,7 @@ public class world {
 		{
 			System.out.print(arr[i]);
 		}
+		sc.clode();
 	}
 }
 //利用函数进行编写，其中要注意的是：数组在函数中的返回值类型应该为 String 字符串，利用＋ 号相连接。
@@ -112,6 +113,7 @@ public class world {
 		int n = sc.nextInt();
 		String result = jiami(n);
 		System.out.print("加密后的密码:"+result);
+		sc.close();
 	}
 	public static String jiami(int n) {
 		int index = 0;
