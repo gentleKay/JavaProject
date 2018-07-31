@@ -129,3 +129,22 @@ public class Student{
 		}
 	}
 }
+// 猜随机数游戏。
+package hello;
+import java.util.Scanner;
+public class Student{
+	public static void main(String[] args) {
+		int number = (int)(Math.random()*100)+1;  // 强制类型转化。
+		while(true) {
+			Scanner sc = new Scanner(System.in);
+			int n = sc.nextInt();
+			if (n > number) {
+				System.out.println("你猜的大了！");
+			}else if (n < number) {
+				System.out.println("你猜的小了！");
+			}else {
+				System.out.println("恭喜你，猜对了！");
+			}
+		}
+	}
+}
