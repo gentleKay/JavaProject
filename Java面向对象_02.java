@@ -136,6 +136,7 @@ public class Student{
 	public static void main(String[] args) {
 		int number = (int)(Math.random()*100)+1;  // 强制类型转化。
 		while(true) {
+			System.out.println("请输入你猜的数字：");
 			Scanner sc = new Scanner(System.in);
 			int n = sc.nextInt();
 			if (n > number) {
@@ -144,6 +145,7 @@ public class Student{
 				System.out.println("你猜的小了！");
 			}else {
 				System.out.println("恭喜你，猜对了！");
+				break;
 			}
 		}
 	}
