@@ -116,3 +116,16 @@ public class Student{
 		System.out.println("面积："+ S);
 	}
 }
+//Math类中的一个函数random， public static double random(): 返回带正号的 double 值，该值 大于等于 0.0 且小于1.0.
+package hello;
+
+public class Student{
+	public static void main(String[] args) {
+		int i;
+		for (i=0;i<100;i++)
+		{
+			double d = Math.random();
+			System.out.println(d);
+		}
+	}
+}
