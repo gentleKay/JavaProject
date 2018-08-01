@@ -129,8 +129,11 @@ public class Student{
 		Cat c = new Cat("小白",2,"白色");
 		Dog d = new Dog("小黑",3,"黑色");
 		System.out.println(c.getName()+","+c.getAge()+","+c.getColor());
+		c.eat();
 		c.play();
+		System.out.println("---------------------");
 		System.out.println(d.getName()+","+d.getAge()+","+d.getColor());
+		d.eat();
 		d.look();
 	}
 }
