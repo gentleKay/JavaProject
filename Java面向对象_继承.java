@@ -30,3 +30,45 @@ public class Student{
 		np.call_2();
 	}
 }
+// 利用继承写,学生，老师类并进行操作。
+package hello;
+
+class Person{
+	private String name;
+	private int age;
+	public Person() {}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getAge() {
+		return age;
+	}
+}
+
+class Teacher extends Person{
+	public Teacher() {}
+}
+class Stu extends Person{
+	public Stu() {}
+}
+
+public class Demo{
+	public static void main(String[] args) {
+		Teacher t = new Teacher();
+		t.setName("GSK");
+		t.setAge(22);
+		System.out.println("姓名："+t.getName());
+		System.out.println("年龄："+t.getAge());
+		Stu s = new Stu();
+		s.setName("gsk");
+		s.setAge(18);
+		System.out.println("姓名："+s.getName());
+		System.out.println("年龄："+s.getAge());
+	}
+}
