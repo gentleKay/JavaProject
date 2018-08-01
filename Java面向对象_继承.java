@@ -10,4 +10,23 @@ public class Student{
 		Son s = new son;
 	}
 }
-//
+//简单的一个继承。
+package hello;
+
+class Phone{
+	public void call_1() {
+		System.out.println("Call Phone!");
+	}
+}
+class NewPhone extends Phone{
+	public void call_2() {
+		System.out.println("Call NewPhone!");
+	}
+}
+public class Student{
+	public static void main(String[] args) {
+		NewPhone np = new NewPhone();
+		np.call_1();
+		np.call_2();
+	}
+}
