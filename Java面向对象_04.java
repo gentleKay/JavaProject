@@ -177,3 +177,78 @@ public class Student{
 		t.teach();
 	}
 }
+// 接口以猫，狗，动物 为例子来进行操作编程。
+package hello;
+
+interface Jump{
+	public static void jump() {}
+}
+
+abstract class Animal{
+	private String name;
+	private int age;
+	
+	public Animal() {}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getAge() {
+		return age;
+	}
+	public abstract void eat();
+}
+
+class Cat extends Animal{
+	public Cat() {}
+
+	public void eat() {
+		System.out.println("猫吃鱼！");
+	}
+}
+
+class Dog extends Animal{
+	public Dog() {}
+
+	public void eat() {
+		System.out.println("狗吃肉！");
+	}
+}
+class JumpCat extends Cat implements Jump{
+	public void jump() {
+		System.out.println("猫跳高！");
+	}
+}
+
+class JumpDog extends Dog implements Jump{
+	public void jump() {
+		System.out.println("狗跳高！");
+	}
+}
+
+public class Student{
+	public static void main(String[] args) {
+		JumpCat jc = new JumpCat();
+		jc.setName("Tom");
+		jc.setAge(3);
+		System.out.println(jc.getName());
+		System.out.println(jc.getAge());
+		jc.eat();
+		jc.jump();
+		System.out.println("---------");
+		Cat c = new Cat();
+		c.setName("Yii");
+		c.setAge(2);
+		System.out.println(c.getName());
+		System.out.println(c.getAge());
+		c.eat();
+		// 狗类就不在这里一一 举例了。
+	}
+}
+//
