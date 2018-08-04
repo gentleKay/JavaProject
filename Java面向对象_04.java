@@ -123,3 +123,57 @@ public class Demo{
 		d.eat();
 	}
 }
+//关于老师类的一个测试
+package hello;
+
+abstract class Teacher{
+	private String name;
+	private int age;
+	public Teacher() {}
+	public Teacher(String name,int age) {
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public abstract void teach();
+}
+class BasicTeacher extends Teacher{
+	public BasicTeacher() {}
+	public BasicTeacher(String name,int age) {
+		super(name,age);
+	}
+	public void teach() {
+		System.out.println("基础班老师！");
+	}
+}
+
+class JobTeacher extends Teacher{
+	public JobTeacher() {}
+	public JobTeacher(String name,int age) {
+		super(name,age);
+	}
+	public void teach() {
+		System.out.println("就业班老师！");
+	}
+}
+
+public class Student{
+	public static void main(String[] args) {
+		Teacher t = new BasicTeacher("xiao余",35);    //利用一个抽象定义对象并直接给 下面的继承的类，节约内存空间。
+		//BasicTeacher bt = new BasicTeacher("xiao余",35);
+		System.out.println(t.getName());
+		System.out.println(t.getAge());
+		t.teach();
+		System.out.println("-----------");
+		t = new JobTeacher("lao余",45);      // 利用一个抽象定义对象并直接给 下面的继承的类，节约内存空间。
+		//JobTeacher jt = new JobTeacher("lao余",45);
+		System.out.println(t.getName());
+		System.out.println(t.getAge());
+		t.teach();
+	}
+}
