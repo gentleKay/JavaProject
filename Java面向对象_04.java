@@ -70,5 +70,56 @@ public class Student{
 		// 这个 对象a 是 猫类的，并不是动物类，所以这句语法有错误。
 	}
 }
-//
+//利用抽象类进行 猫，狗，动物类的操作
+package hello;
 
+abstract class Animal{
+	private String name;
+	private int age;
+	
+	public Animal() {}
+	public Animal(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public abstract void eat();
+}
+
+class Cat extends Animal{
+	public Cat() {}
+	public Cat(String name,int age) {
+		super(name,age);
+	}
+	public void eat() {
+		System.out.println("猫吃鱼！");
+	}
+}
+
+class Dog extends Animal{
+	public Dog() {}
+	public Dog(String name,int age) {
+		super(name,age);
+	}
+	public void eat() {
+		System.out.println("狗吃肉！");
+	}
+}
+public class Demo{
+	public static void main(String[] args) {
+		Cat c = new Cat("Tom",2);
+		System.out.println(c.getName());
+		System.out.println(c.getAge());
+		c.eat();
+		System.out.println("------------");
+		Dog d = new Dog("Hirg",3);
+		System.out.println(d.getName());
+		System.out.println(d.getAge());
+		d.eat();
+	}
+}
